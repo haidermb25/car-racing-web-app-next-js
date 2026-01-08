@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -94,9 +95,9 @@ export default function Header() {
             <div className="flex items-center gap-4">
               {/* Register Button */}
               {/* Register Button (Desktop ONLY) */}
-              <button className="hidden lg:block bg-sky-400 hover:bg-sky-500 text-white uppercase font-black px-6 py-2.5 text-sm xl:text-base tracking-wide transition-colors rounded">
+              <Link href="/register" className="hidden lg:block bg-sky-400 hover:bg-sky-500 text-white uppercase font-black px-6 py-2.5 text-sm xl:text-base tracking-wide transition-colors rounded">
                 REGISTER
-              </button>
+              </Link>
 
 
               {/* Mobile Menu Button */}
@@ -130,9 +131,9 @@ export default function Header() {
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>TESTING</a>
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>SPECIAL EVENTS</a>
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>SHOP</a>
-                <button className="bg-sky-400 hover:bg-sky-500 text-white uppercase font-black px-6 py-2.5 text-base tracking-wide transition-colors rounded w-full sm:w-auto">
+                <Link href="/register" className="bg-sky-400 hover:bg-sky-500 text-white uppercase font-black px-6 py-2.5 text-base tracking-wide transition-colors rounded w-full sm:w-auto text-center block" onClick={() => setMobileMenuOpen(false)}>
                   REGISTER
-                </button>
+                </Link>
               </div>
             </div>
           )}
