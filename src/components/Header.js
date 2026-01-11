@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [racingDropdownOpen, setRacingDropdownOpen] = useState(false);
+  const [testingDropdownOpen, setTestingDropdownOpen] = useState(false);
 
   return (
     <>
@@ -65,30 +67,44 @@ export default function Header() {
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
-              <a
-                href="#"
-                className="text-black uppercase font-black text-base xl:text-lg tracking-wide hover:opacity-70 transition-opacity whitespace-nowrap"
+              <button
+                onClick={() => {
+                  setRacingDropdownOpen(!racingDropdownOpen);
+                  setTestingDropdownOpen(false);
+                }}
+                className={`uppercase font-black text-base xl:text-lg tracking-wide whitespace-nowrap transition-all ${
+                  racingDropdownOpen 
+                    ? 'text-black border-2 border-red-500 px-3 py-1' 
+                    : 'text-black hover:opacity-70'
+                }`}
               >
                 RACING
-              </a>
-              <a
-                href="#"
-                className="text-black uppercase font-black text-base xl:text-lg tracking-wide hover:opacity-70 transition-opacity whitespace-nowrap"
+              </button>
+              <button
+                onClick={() => {
+                  setTestingDropdownOpen(!testingDropdownOpen);
+                  setRacingDropdownOpen(false);
+                }}
+                className={`uppercase font-black text-base xl:text-lg tracking-wide whitespace-nowrap transition-all ${
+                  testingDropdownOpen 
+                    ? 'text-black border-2 border-red-500 px-3 py-1' 
+                    : 'text-black hover:opacity-70'
+                }`}
               >
                 TESTING
-              </a>
+              </button>
               <a
                 href="#"
                 className="text-black uppercase font-black text-base xl:text-lg tracking-wide hover:opacity-70 transition-opacity whitespace-nowrap"
               >
                 SPECIAL EVENTS
               </a>
-              <a
-                href="#"
+              <Link
+                href="/shop"
                 className="text-black uppercase font-black text-base xl:text-lg tracking-wide hover:opacity-70 transition-opacity whitespace-nowrap"
               >
                 SHOP
-              </a>
+              </Link>
             </div>
 
             {/* Right Side: Register Button & Mobile Menu */}
@@ -130,7 +146,7 @@ export default function Header() {
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>RACING</a>
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>TESTING</a>
                 <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>SPECIAL EVENTS</a>
-                <a href="#" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>SHOP</a>
+                <Link href="/shop" className="text-black uppercase font-black text-base tracking-wide hover:opacity-70 transition-opacity" onClick={() => setMobileMenuOpen(false)}>SHOP</Link>
                 <Link href="/register" className="bg-sky-400 hover:bg-sky-500 text-white uppercase font-black px-6 py-2.5 text-base tracking-wide transition-colors rounded w-full sm:w-auto text-center block" onClick={() => setMobileMenuOpen(false)}>
                   REGISTER
                 </Link>
@@ -139,6 +155,172 @@ export default function Header() {
           )}
         </div>
       </nav>
+
+      {/* Racing Dropdown - Full Width */}
+      {racingDropdownOpen && (
+        <div className="w-full bg-white border-b border-black z-50">
+          <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[80%_20%] gap-8">
+              {/* Left Side - Championship Cards (3 in one row, 4th on next row) */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* JUNIOR SUMMER SPRINT CHAMPIONSHIP */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    JUNIOR SUMMER SPRINT CHAMPIONSHIP
+                  </h3>
+                  <div className="text-black text-sm space-y-1">
+                    <p>12-16yrs</p>
+                    <p>4 rounds</p>
+                  </div>
+                </div>
+
+                {/* SENIOR SUMMER SPRINT CHAMPIONSHIP */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    SENIOR SUMMER SPRINT CHAMPIONSHIP
+                  </h3>
+                  <div className="text-black text-sm space-y-1">
+                    <p>16+ yrs</p>
+                    <p>4 rounds</p>
+                  </div>
+                </div>
+
+                {/* ENDURANCE CHAMPIONSHIP */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    ENDURANCE CHAMPIONSHIP
+                  </h3>
+                  <div className="text-black text-sm space-y-1">
+                    <p>14+ yrs</p>
+                    <p>TBD</p>
+                  </div>
+                </div>
+
+                {/* SODI WORLD SERIES CHAMPIONSHIOP */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    SODI WORLD SERIES CHAMPIONSHIOP
+                  </h3>
+                  <div className="text-black text-sm space-y-1">
+                    <p>12-16yrs & 16+ yrs</p>
+                    <p>24 Rounds</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Quicklinks Sidebar (20% width) */}
+              <div className="border-l border-black pl-8">
+                <h3 className="text-black uppercase font-black text-xl mb-6">
+                  QUICKLINKS
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Results
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Standings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      FAQ's
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Karts
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Testing Dropdown - Full Width */}
+      {testingDropdownOpen && (
+        <div className="w-full bg-white border-b border-black z-50">
+          <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[80%_20%] gap-8">
+              {/* Left Side - Testing Content Blocks (3 in one row) */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* OPEN TESTING */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    OPEN TESTING
+                  </h3>
+                  <p className="text-black text-sm">
+                    Drivers can drop in and purchase individual sessions for seat time and testing.
+                  </p>
+                </div>
+
+                {/* PRE-EVENT TESTING */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    PRE-EVENT TESTING
+                  </h3>
+                  <p className="text-black text-sm">
+                    Drivers can drop in the day before the event for open seat time and testing ahead of the race.
+                  </p>
+                </div>
+
+                {/* RACE CLASSES */}
+                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-black uppercase font-black text-xl mb-3">
+                    RACE CLASSES
+                  </h3>
+                  <p className="text-black text-sm">
+                    Drivers can drop in the day before the event for open seat time and testing ahead of the race.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Side - Quicklinks Sidebar (20% width) */}
+              <div className="border-l border-black pl-8">
+                <h3 className="text-black uppercase font-black text-xl mb-6">
+                  QUICKLINKS
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Results
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Standings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      FAQ's
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black text-base hover:text-sky-400 transition-colors">
+                      Karts
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

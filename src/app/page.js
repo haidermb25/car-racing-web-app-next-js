@@ -187,6 +187,58 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sodi World Series Banner Section */}
+      <div className="relative mx-4 my-4 overflow-hidden">
+        <div className="relative w-full h-[600px]">
+
+          {/* Background Image */}
+          <Image
+            src="/Bandeau-WEB-SWS-INTER-2023.png"
+            alt="Sodi World Series Background"
+            fill
+            priority
+            className="object-cover"
+          />
+
+          {/* Dark Gradient Overlay (IMPORTANT) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+          {/* Content */}
+          <div className="absolute inset-0 z-10 flex flex-col px-6 lg:px-10">
+
+            {/* Logos */}
+            <div className="flex items-center gap-8 pt-6">
+              <Image src="/logo-sws.png" alt="SWS Logo" width={100} height={50} />
+              <Image src="/PODIUM_ logo design-01.jpg" alt="PODIUM TKC" width={140} height={50} />
+            </div>
+
+            {/* Main Text */}
+            <div className="flex-1 flex items-center">
+              <div className="max-w-xl">
+                <h2 className="text-white uppercase font-black text-5xl md:text-6xl leading-tight mb-8">
+                  YOUR PATH TO<br />
+                  THE SODI<br />
+                  WORLD SERIES.
+                </h2>
+
+                {/* Buttons */}
+                <div className="flex gap-4">
+                  <button className="bg-yellow-400 text-black uppercase font-black px-8 py-4">
+                    FIND EVENTS
+                  </button>
+                  <button className="bg-white text-black uppercase font-black px-8 py-4">
+                    LEARN MORE
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
       {/* Endurance Racing Section */}
       <div className="bg-white w-[98%] mx-auto my-4">
         <div className="w-full">
@@ -238,6 +290,112 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Services Section - Three Panels */}
+      <div className="w-full px-4">
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+
+            {/* Panel 1: OPEN TESTING */}
+            <div className="group relative min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] overflow-hidden">
+              <Image
+                src="/thumb_car.jpg"
+                alt="Open Testing"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/65 transition-colors duration-300 group-hover:bg-black/50"></div>
+
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col p-6 sm:p-8 lg:p-10">
+                {/* Top Content */}
+                <div>
+                  <h3 className="text-white uppercase font-black text-4xl sm:text-5xl lg:text-6xl leading-none mb-5 mt-10">
+                    OPEN TESTING
+                  </h3>
+
+                  <p className="text-white max-w-[420px] text-base sm:text-lg leading-relaxed">
+                    Open testing allows drivers to arrive throughout the day and purchase individual
+                    10-minute on-track sessions. Sessions are run on a first-come, first-served basis
+                    and are ideal for drivers looking for seat time on their schedule.
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                  LEARN MORE &gt;
+                </button>
+              </div>
+            </div>
+
+            {/* Panel 2: DRIVER COACHING */}
+            <div className="group relative min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] overflow-hidden">
+              <Image
+                src="/racing.png"
+                alt="Driver Coaching"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-black/65 transition-colors duration-300 group-hover:bg-black/50"></div>
+
+              <div className="relative z-10 h-full flex flex-col p-6 sm:p-8 lg:p-10">
+                <div>
+                  <h3 className="text-white uppercase font-black text-4xl sm:text-5xl lg:text-6xl leading-none mb-5 mt-10">
+                    DRIVER COACHING
+                  </h3>
+
+                  <p className="text-white max-w-[420px] text-base sm:text-lg leading-relaxed">
+                    Train directly with accomplished karting champions and professional race car drivers
+                    in a private coaching environment. Sessions are customized to improve lap time,
+                    driving fundamentals, race strategy, and on-track awareness.
+                  </p>
+                </div>
+
+                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                  LEARN MORE &gt;
+                </button>
+              </div>
+            </div>
+
+            {/* Panel 3: PRE-EVENT TESTING */}
+            <div className="group relative min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] overflow-hidden">
+              <Image
+                src="/sport.png"
+                alt="Pre-Event Testing"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-black/65 transition-colors duration-300 group-hover:bg-black/50"></div>
+
+              <div className="relative z-10 h-full flex flex-col  p-6 sm:p-8 lg:p-10">
+                <div>
+                  <h3 className="text-white uppercase font-black text-4xl sm:text-5xl lg:text-6xl leading-none mb-5 mt-10">
+                    PRE-EVENT TESTING
+                  </h3>
+
+                  <p className="text-white max-w-[420px] text-base sm:text-lg leading-relaxed">
+                    Pre-event testing offers structured, full-length test days held prior to major
+                    events. These sessions provide extended track time in an organized format,
+                    allowing drivers to dial in setup, refine driving technique, and prepare
+                    confidently for race weekend.
+                  </p>
+                </div>
+
+                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                  LEARN MORE &gt;
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
 
 
       {/* Sodi Sport Section */}
