@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Register() {
   return (
@@ -79,9 +80,9 @@ export default function Register() {
                   + Additional $50 Podium TKC annual membership fee
                 </p>
                 
-                <button class="bg-[#56C1FF] hover:bg-[#40b0f0] text-black uppercase font-bold py-4 px-12 text-2xl tracking-widest transition-colors">
+                <Link href="/register" class="bg-[#56C1FF] hover:bg-[#40b0f0] text-black uppercase font-bold py-4 px-12 text-2xl tracking-widest transition-colors inline-block text-center">
                   REGISTER
-                </button>
+                </Link>
               </div>
 
               <div class="bg-[#56C1FF] p-12 flex flex-col justify-center max-w-lg">
@@ -200,9 +201,12 @@ export default function Register() {
 
                       {/* Info Block */}
                       <div className="flex flex-col justify-center pt-1">
-                        <span className="text-3xl font-black border-b-4 border-black inline-block mb-1">
+                        <Link 
+                          href="/event-overview" 
+                          className="text-3xl font-black border-b-4 border-black inline-block mb-1 hover:opacity-70 transition-opacity cursor-pointer"
+                        >
                           {event.round}
-                        </span>
+                        </Link>
                         <span className="text-2xl font-normal leading-tight max-w-[200px]">
                           {event.venue}
                         </span>
@@ -212,9 +216,9 @@ export default function Register() {
                 </div>
 
                 <div className="pt-4 border-t border-gray-200">
-                  <a href="#" className="text-3xl font-medium underline underline-offset-8 decoration-2 hover:opacity-70 transition-opacity">
+                  <Link href="/event-overview" className="text-3xl font-medium underline underline-offset-8 decoration-2 hover:opacity-70 transition-opacity">
                     More Events
-                  </a>
+                  </Link>
                 </div>
               </div>
 

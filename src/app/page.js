@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -65,9 +66,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">MAY 21</p>
                     <p className="text-black text-sm mb-6">Apex Racing Center</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -86,9 +87,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">JUNE 30</p>
                     <p className="text-black text-sm mb-6">Adams Motorsports Park</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -107,9 +108,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">JULY 27</p>
                     <p className="text-black text-sm mb-6">Willowsprings Raceway</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -128,9 +129,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">AUGUST 24</p>
                     <p className="text-black text-sm mb-6">Apex Formula Track</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -149,9 +150,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">SEPTEMBER 14</p>
                     <p className="text-black text-sm mb-6">Speedway Circuit</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -170,9 +171,9 @@ export default function Home() {
                   <div className="p-4 flex flex-col">
                     <p className="text-black uppercase font-bold text-xl mb-2">OCTOBER 5</p>
                     <p className="text-black text-sm mb-6">Thunder Race Park</p>
-                    <button className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap">
+                    <Link href="/event-overview" className="w-1/2 border border-black uppercase font-bold text-sm py-2 px-4 text-black whitespace-nowrap text-center hover:opacity-80 transition-opacity">
                       VIEW EVENT
-                    </button>
+                    </Link>
                   </div>
                 </div>
             </div>
@@ -223,12 +224,12 @@ export default function Home() {
 
                 {/* Buttons */}
                 <div className="flex gap-4">
-                  <button className="bg-yellow-400 text-black uppercase font-black px-8 py-4">
+                  <Link href="/register" className="bg-yellow-400 text-black uppercase font-black px-8 py-4 hover:opacity-90 transition-opacity">
                     FIND EVENTS
-                  </button>
-                  <button className="bg-white text-black uppercase font-black px-8 py-4">
+                  </Link>
+                  <Link href="/sws-events" className="bg-white text-black uppercase font-black px-8 py-4 hover:opacity-90 transition-opacity">
                     LEARN MORE
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -324,9 +325,9 @@ export default function Home() {
                 </div>
 
                 {/* CTA */}
-                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                <Link href="/open-testing" className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
                   LEARN MORE &gt;
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -354,9 +355,9 @@ export default function Home() {
                   </p>
                 </div>
 
-                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                <Link href="/driver-coaching" className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
                   LEARN MORE &gt;
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -385,9 +386,9 @@ export default function Home() {
                   </p>
                 </div>
 
-                <button className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
+                <Link href="/pre-event-testing" className="text-white uppercase font-black text-xl sm:text-2xl tracking-widest hover:opacity-80 transition-opacity self-start mt-10">
                   LEARN MORE &gt;
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -620,6 +621,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-     </div>
+    </div>
   );
 }

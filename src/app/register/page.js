@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Register() {
   // Race registration events data
@@ -102,7 +103,7 @@ export default function Register() {
                 className="bg-[#DEDEDE] mx-2 sm:mx-4 lg:mx-8 overflow-hidden"
               >
                 {/* Main Layout: Left and Right Sections */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px]">
+                <Link href="/registration-page" className="grid grid-cols-1 lg:grid-cols-[1fr_350px] hover:opacity-95 transition-opacity cursor-pointer block">
                   
                   {/* Left Section: Top (Title) and Bottom (Blue Box + Details) */}
                   <div className="flex flex-col p-4 sm:p-6">
@@ -154,7 +155,7 @@ export default function Register() {
                       className="object-cover"
                     />
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

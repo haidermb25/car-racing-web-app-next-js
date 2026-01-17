@@ -164,7 +164,11 @@ export default function Header() {
               {/* Left Side - Championship Cards (3 in one row, 4th on next row) */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* JUNIOR SUMMER SPRINT CHAMPIONSHIP */}
-                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                <Link 
+                  href="/championship-info" 
+                  onClick={() => setRacingDropdownOpen(false)}
+                  className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                >
                   <h3 className="text-black uppercase font-black text-xl mb-3">
                     JUNIOR SUMMER SPRINT CHAMPIONSHIP
                   </h3>
@@ -172,10 +176,14 @@ export default function Header() {
                     <p>12-16yrs</p>
                     <p>4 rounds</p>
                   </div>
-                </div>
+                </Link>
 
                 {/* SENIOR SUMMER SPRINT CHAMPIONSHIP */}
-                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                <Link 
+                  href="/championship-info" 
+                  onClick={() => setRacingDropdownOpen(false)}
+                  className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                >
                   <h3 className="text-black uppercase font-black text-xl mb-3">
                     SENIOR SUMMER SPRINT CHAMPIONSHIP
                   </h3>
@@ -183,10 +191,14 @@ export default function Header() {
                     <p>16+ yrs</p>
                     <p>4 rounds</p>
                   </div>
-                </div>
+                </Link>
 
                 {/* ENDURANCE CHAMPIONSHIP */}
-                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                <Link 
+                  href="/championship-info" 
+                  onClick={() => setRacingDropdownOpen(false)}
+                  className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                >
                   <h3 className="text-black uppercase font-black text-xl mb-3">
                     ENDURANCE CHAMPIONSHIP
                   </h3>
@@ -194,10 +206,14 @@ export default function Header() {
                     <p>14+ yrs</p>
                     <p>TBD</p>
                   </div>
-                </div>
+                </Link>
 
                 {/* SODI WORLD SERIES CHAMPIONSHIOP */}
-                <div className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                <Link 
+                  href="/championship-info" 
+                  onClick={() => setRacingDropdownOpen(false)}
+                  className="bg-gray-100 border-l-4 border-sky-400 p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                >
                   <h3 className="text-black uppercase font-black text-xl mb-3">
                     SODI WORLD SERIES CHAMPIONSHIOP
                   </h3>
@@ -205,7 +221,7 @@ export default function Header() {
                     <p>12-16yrs & 16+ yrs</p>
                     <p>24 Rounds</p>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Right Side - Quicklinks Sidebar (20% width) */}
